@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+    <link rel="stylesheet" href="asset/question.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="question-counter">Question 1 of 10</div>
+            <div class="total-points">Total Points: 0</div>
+        </div>
+        <div class="question">
+            <h2 id="question-text"></h2>
+            <ul class="choices" id="choices-list">
+            </ul>
+        </div>
+        <div class="assistance">
+            <button class="hint">Hint</button>
+            <div class="hint-text">
+                 <!-- Hint text will be dynamically populated -->
+            </div>
+        </div>
+        <div class="navigation">
+            <a href="start.html"><button class="go-back">Go Back Home</button></a>
+            <button class="go-next">Go to Next Question</button>
+        </div>
+    </div>
+    
+</body>
+<script src="logic/hint.js"></script>
+<script src="logic/game.js"></script>
+</html>

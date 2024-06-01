@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: #0056b3;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-counter, .total-points {
+    font-size: 18px;
+}
+
+.question {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.question h2 {
+    margin-top: 0;
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.choices {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.choice {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.choice:hover {
+    background-color: #0056b3;
+}
+/* Existing styles */
+
+.navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.go-back, .go-next {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-back:hover, .go-next:hover {
+    background-color: #0056b3;
+}
+/* Existing styles */
+
+.assistance {
+    position: relative;
+    margin-top: 20px;
+}
+
+.hint {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hint:hover {
+    background-color: #0056b3;
+}
+
+.hint-text {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.show-hint .hint-text {
+    display: block;
+}
+
+.choice.incorrect {
+    animation: pulse-red 0.5s infinite alternate;
+}
+/* Thêm vào file styles.css */
+.correct-answer {
+    animation: glow-green 0.5s;
+    animation: pulse-green 0.5s infinite alternate;
+    
+}
+
+@keyframes glow-green {
+    0%, 100% {
+        background-color: #28a745; /* Màu xanh lá cây */
+    }
+    50% {
+        background-color: #28a745; /* Màu xanh dương */
+    }
+}
+
+
+@keyframes pulse-green {
+    from {
+        background-color: #28a745; /* Màu xanh lá cây */
+    }
+    to {
+        background-color:#28a745; /* Màu xanh dương */
+    }
+}
+
+@keyframes pulse-red {
+    from {
+        background-color: #dc3545; /* Màu đỏ */
+    }
+    to {
+        background-color: #007bff; /* Màu xanh dương */
+    }
+}
+
+
